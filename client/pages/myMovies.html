@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <!-- Container wrapper -->
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="logo">
+                <img src="../images/filmIcon.png" alt="">
+                <span>Movies</span>
+            </a>
+            <!-- Search form -->
+            <form class="input-group" style="width: 300px; padding: 10px;">
+                <input type="text" class="form-control" placeholder="Search by Movie ID" aria-label="Search"
+                    id="searchByMovieId" />
+            </form>
+
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left links -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column text-center active" aria-current="page"
+                            href="../pages/homePage.html"><img src="../images/homeIcon.png" style="height: 35px;"
+                                alt="">
+                            <span style="color:#2e6ee4;font-weight: bold;font-size: small;" class="small">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column text-center active" aria-current="page"
+                            href="../pages/myMovies.html"><img src="../images/myMoviesIcon.png"
+                                style="height:35px; width: 40px; display: block; margin: 0 auto;" alt="">
+                            <span style="color:#2e6ee4;font-weight: bold;font-size: small;" class="small">My Movies</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="logoutBtn" class="nav-link d-flex flex-column text-center active" aria-current="page"
+                            href="#"><img src="../images/logoutIcon.png"
+                                style="height:35px; width: 40px; display: block; margin: 0 auto;" alt="">
+                            <span style="color:#2e6ee4;font-weight: bold; font-size: small;"
+                                class="small">Logout</span></a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+    <div class="container" style="margin-top: 80px;">
+        <button id="CreateNewMovieBtn">Create New Movie</button>
+        <div
+            style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <div
+                style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 16px; padding-bottom: 24px;">
+                <img src="../images/myMoviesIcon.png" alt="" id="myMoviesIcon" style="height: 50px; width: 60px;">
+                <h1 style="color:#2e6ee4; font-weight: bold;">My Movies</h1>
+            </div>
+
+        </div>
+        <div id="myMoviesContent"></div>
+
+        <dialog id="modal">
+            <div class="modal-container">
+                <button id="exitModal">X</button>
+                <h4>Create New Movie</h4>
+                <input type="text" placeholder="Type Movie Name" id="movieName">
+                <input type="text" placeholder="Type Movie Release Date" id="movieReleaseDate">
+                <input type="text" placeholder="Type Director" id="director">
+                <input type="text" placeholder="Type Length" id="movieLength">
+                <input type="text" placeholder="Link of movie picture" id="moviePicture">
+                <div>
+                    <button id="saveMovieBtn" data-bs-dismiss="toast">Save New Movie</button>
+                    <button id="updateMovieBtn" data-bs-dismiss="toast">Update Movie</button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="deleteModal">
+            <div id="deleteModalContent"></div>
+            <p>Are you sure you want to delete this movie?</p>
+            <div style="margin-top: 15px;">
+                <button id="confirmDeleteBtn">Delete</button>
+                <button id="cancelDeleteBtn">Cancel</button>
+            </div>
+        </dialog>
+    </div>
+    </div>
+    <div id="toastContainer">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="module" src="../scripts/myMovies.js"></script>
+</body>
+
+</html>

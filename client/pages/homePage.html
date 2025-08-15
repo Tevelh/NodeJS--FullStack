@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+</head>
+<!-- <style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f2f4f8;
+        color: #333;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    #CreateNewMovieBtn {
+        padding: 10px 16px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    #CreateNewMovieBtn:hover {
+        background-color: #0056b3;
+    }
+
+    h1 {
+        margin-top: 20px;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    #movieId {
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 14px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    #movieContent,
+    #allMoviesContent {
+        margin-top: 20px;
+    }
+
+    #allMoviesContent {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .movieCard:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .movieCard {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        white-space: nowrap;
+        height: fit-content;
+        text-align: center;
+    }
+
+    .movieCard img {
+        max-width: 100%;
+        height: auto;
+        display: inline-block; 
+        margin: 0 auto; 
+        text-align: center;
+    }
+
+    .movieCard p {
+        margin: 8px 0;
+        font-size: 16px;
+        color: #333;
+        text-align: left;
+    }
+
+    .movieCard #buttonsCard {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+    }
+
+    dialog {
+        border: none;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 400px;
+        max-height: 400px;
+        padding: 40px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .modal-container h4 {
+        margin: 0 0 10px 0;
+        font-size: 20px;
+    }
+
+    .modal-container input {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    .modal-container button {
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: #28a745;
+        color: white;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .modal-container button,
+    #updateMovieBtn {
+        background-color: #2ea4c1;
+    }
+
+    .modal-container button:hover {
+        opacity: 0.9;
+    }
+
+    #exitModal {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #888;
+        transition: color 0.2s ease;
+    }
+
+    #exitModal:hover {
+        color: #000;
+    }
+
+    #editMovieBtn {
+        background-color: #17a2b8;
+        color: white;
+        border: none;
+        padding: 6px 8px;
+        font-size: 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        margin-right: 8px;
+        margin-top: 8px;
+    }
+
+    #editMovieBtn:hover {
+        background-color: #138496;
+    }
+
+    #deleteMovieBtn {
+        background-color: #ea2323e3;
+        color: white;
+        border: none;
+        padding: 6px 8px;
+        font-size: 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        margin-right: 8px;
+        margin-top: 8px;
+    }
+
+    #deleteMovieBtn:hover {
+        background-color: #f66060;
+    }
+</style> -->
+
+<body>
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <!-- Container wrapper -->
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="logo">
+                <img src="../images/filmIcon.png" alt="">
+                <span>Movies</span>
+            </a>
+            <!-- Search form -->
+            <form class="input-group" style="width: 300px; padding: 10px;">
+                <input type="text" class="form-control" placeholder="Search by Movie ID" aria-label="Search"
+                    id="searchByMovieId" />
+            </form>
+
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left links -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column text-center active" aria-current="page"
+                            href="../pages/homePage.html"><img src="../images/homeIcon.png" style="height: 35px;"
+                                alt="">
+                            <span style="color:#2e6ee4;font-weight: bold;font-size: small;" class="small">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column text-center active" aria-current="page"
+                            href="../pages/myMovies.html"><img src="../images/myMoviesIcon.png"
+                                style="height:35px; width: 40px; display: block; margin: 0 auto;" alt="">
+                            <span style="color:#2e6ee4;font-weight: bold;font-size: small;" class="small">My Movies</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="logoutBtn" class="nav-link d-flex flex-column text-center active" aria-current="page"
+                            href="#"><img src="../images/logoutIcon.png"
+                                style="height:35px; width: 40px; display: block; margin: 0 auto;" alt="">
+                            <span style="color:#2e6ee4;font-weight: bold; font-size: small;" class="small">Logout</span></a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+    <div class="container">
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 16px; padding-bottom: 24px;">
+                <img src="../images/homePageMoviesIcon.png" alt="" id="myMoviesIcon" style="height: 50px; width: 60px;">
+                <h1 style="color:#2e6ee4; font-weight: bold;">Movies</h1>
+            </div>
+        <div id="movieContent"></div>
+
+        <div id="allMoviesContent"></div>
+
+        
+    </div>
+    <script type="module" src="../scripts/homePage.js"></script>
+</body>
+
+</html>

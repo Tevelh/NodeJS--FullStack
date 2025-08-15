@@ -1,0 +1,68 @@
+[
+    {
+        "userId": "689f7442b14a7cfff4fa3c52",
+        "action": "GET_MOVIE",
+        "counter": 1,
+        "timestamp": "2025-08-15T18:59:05.945Z"
+    },
+    {
+        "userId": "689f7442b14a7cfff4fa3c52",
+        "action": "GET_MOVIE",
+        "counter": 0,
+        "timestamp": "2025-08-15T18:59:11.686Z"
+    },
+    {
+        "userId": "689f83ae473ac46c31036afd",
+        "action": "GET_MOVIE",
+        "counter": 9,
+        "timestamp": "2025-08-15T19:00:15.615Z"
+    },
+    {
+        "userId": "689f83ae473ac46c31036afd",
+        "action": "GET_MOVIE",
+        "counter": 8,
+        "timestamp": "2025-08-15T19:00:25.636Z"
+    },
+    {
+        "userId": "689f83ae473ac46c31036afd",
+        "action": "GET_MOVIE",
+        "counter": 7,
+        "timestamp": "2025-08-15T19:00:28.713Z"
+    },
+    {
+        "userId": "689f83ae473ac46c31036afd",
+        "action": "GET_MOVIE",
+        "counter": 6,
+        "timestamp": "2025-08-15T19:00:35.055Z"
+    },
+    {
+        "userId": "689f83ae473ac46c31036afd",
+        "action": "GET_MOVIE",
+        "counter": 5,
+        "timestamp": "2025-08-15T19:01:04.572Z"
+    },
+    {
+        "userId": "689f83ae473ac46c31036afd",
+        "action": "GET_MOVIE",
+        "counter": 4,
+        "timestamp": "2025-08-15T19:01:06.364Z"
+    },
+    {
+        "userId": "689f83ae473ac46c31036afd",
+        "action": "GET_MOVIE",
+        "counter": 3,
+        "timestamp": "2025-08-15T19:01:56.022Z"
+    },
+    {
+        "userId": "689f83ae473ac46c31036afd",
+        "action": "POST_MOVIE",
+        "counter": 2,
+        "timestamp": "2025-08-15T19:02:07.321Z"
+    },
+    {
+        "userId": "689f83ae473ac46c31036afd",
+        "action": "GET_MOVIE",
+        "counter": 1,
+        "timestamp": "2025-08-15T19:02:08.969Z"
+    }
+]
