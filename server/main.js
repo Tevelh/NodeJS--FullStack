@@ -15,7 +15,6 @@ require("./configs/connectToDB")();
 app.use(express.json());
 const cors = require("cors");
 app.use(cors({
-    origin: "http://localhost:5501",
     credentials: true
 }));
 

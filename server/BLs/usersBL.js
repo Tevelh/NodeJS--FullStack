@@ -108,7 +108,6 @@ const forgotPassword = async(email)=>
             await sendEmail(
                 user.email,
                 "Reset Password",
-                `<a href="http://localhost:5501/client/pages/forgotPasswordResetLink.html?token=${tempToken}">Please click here to reset your password</a>`
             )
             return "Email for reset password sent to Email adress";
 

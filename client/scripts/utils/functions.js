@@ -79,7 +79,6 @@ export const getAllMovies = async (contentDiv, data, page) => {
         if (regularCreateBtn) {
             regularCreateBtn.style.display = 'none';
         }
-        // Show styled empty card/message and center Create Movie button
         const emptyCard = document.createElement("div");
         emptyCard.className = "movieCard";
         emptyCard.innerHTML = `<div style=\"text-align:center; padding:32px 0 24px 0; color:#888;\">
@@ -88,7 +87,6 @@ export const getAllMovies = async (contentDiv, data, page) => {
             <button id='CreateNewMovieBtn' style='display:inline-block; margin:16px auto 0 auto; background:#d572f3; color:#fff; border:none; border-radius:25px; padding:12px 40px; font-size:18px; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:background-color 0.3s;'>Create Movie</button>
         </div>`;
         contentDiv.appendChild(emptyCard);
-        // Re-attach event listener for modal
         const createBtn = emptyCard.querySelector('#CreateNewMovieBtn');
         if (createBtn) {
             createBtn.addEventListener('click', () => {
@@ -162,7 +160,6 @@ async function deleteMovie(movieId) {
     }
 }
 
-// Toast notification function
 function showToast(message, isError = false) {
     const container = document.getElementById('toastContainer');
     if (!container) return;

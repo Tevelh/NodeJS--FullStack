@@ -15,7 +15,6 @@ function handleCounter(req, actionType) {
         } else {
             req.session.counter = 0;
         }
-        // Log the user action
         if (req.user && req.user.id) {
             moviesBL.logUserAction(req.user.id, actionType, req.session.counter);
         }

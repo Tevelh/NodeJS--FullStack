@@ -1,11 +1,9 @@
 const jwt = require("jsonwebtoken");
 
 
-// Simple in-memory blacklist for demonstration
 const blockedUsers = new Set();
 
 module.exports = function verifyToken(req, res, next) {
-    // Check if user is blocked
     if (req.session && req.session.blockedUserId && blockedUsers.has(req.session.blockedUserId)) {
         return res.status(403).json({ error: "Access denied due to counter logout" });
     }
@@ -16,7 +14,6 @@ module.exports = function verifyToken(req, res, next) {
     try {
         const data = jwt.verify(token, process.env.SECRET_KEY_TOKEN);
         req.user = data;
-        // If user is blocked, deny access
         if (blockedUsers.has(data.id)) {
             req.session.blockedUserId = data.id;
             return res.status(403).json({ error: "Access denied due to counter logout" });
@@ -27,6 +24,5 @@ module.exports = function verifyToken(req, res, next) {
     }
 }
 
-// Export for use in router
 module.exports.blockedUsers = blockedUsers;
 
