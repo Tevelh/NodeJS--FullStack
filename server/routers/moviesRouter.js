@@ -3,11 +3,10 @@ const moviesBL = require("../BLs/moviesBL");
 const verifyToken = require("../utils/verifyToken");
 
 function handleCounter(req, actionType) {
-    // Only decrement for real user actions
-    const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+    const today = new Date().toISOString().slice(0, 10);
     if (!req.session.lastCounterDate || req.session.lastCounterDate !== today) {
         req.session.lastCounterDate = today;
-        req.session.counter = 10; // Reset to 10 actions per new day
+        req.session.counter = 10; 
     }
 
     if (["GET_MOVIE", "POST_MOVIE", "PUT_MOVIE", "DELETE_MOVIE"].includes(actionType)) {
