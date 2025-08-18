@@ -1,4 +1,4 @@
-import { sendHTTPRequests, getAllMovies } from "./utils/functions.js";
+import { sendHTTPRequests, getAllMovies, getMovieById } from "./utils/functions.js";
 
 const modal = document.getElementById("modal");
 const allMoviesContent = document.getElementById("allMoviesContent");
@@ -14,7 +14,6 @@ const movieLength = document.getElementById("movieLength");
 const moviePicture = document.getElementById("moviePicture");
 
 
-
 let responseData = await sendHTTPRequests(moviesServerURL, "GET");
 console.log("responseData", responseData);
 if (!Array.isArray(responseData.movies)) {
@@ -23,31 +22,23 @@ if (!Array.isArray(responseData.movies)) {
 } else {
     getAllMovies(allMoviesContent, responseData.movies, "allMovies");
 }
-document.getElementById("searchByMovieId").addEventListener("input", async (event) => {
-
+document.getElementById("searchByMovieId").addEventListener("input", async(event)=>
+{
+    event.preventDefault();
     let movieId = event.target.value;
-    if (movieId == "") {
-        getAllMovies(allMoviesContent, responseData, "allMovies");
+    if(movieId == "")
+    {
+        getAllMovies(allMoviesContent, responseData.movies, "allMovies");
     }
-    else {
+    else
+    {
         let movie = await getMovieById(movieId);
-        console.log(movie);
-        if (!movie) {
+        console.log("movie", movie);
+        if(!movie || movie == "No Movie found")
+        {
             alert("No movie found");
             return;
         }
-        allMoviesContent.innerHTML = "";
-        allMoviesContent.innerHTML =
-            `
-        <div class="movieCard">
-                <p><strong>Name: </strong>${movie.name}</p>
-                <p><strong>Director: </strong>${movie.director}</p>
-                <p><strong>Premiered Year: </strong>${movie.premieredYear}</p>
-                <div id="buttonsCard">
-                    <button onclick="editMovie('${movie._id}')" id="editMovieBtn">Edit</button>
-                    <button onclick="deleteMovie('${movie._id}')" id="deleteMovieBtn">Delete</button>
-                </div>
-            </div>    
-        `
+        getAllMovies(allMoviesContent, [movie], "allMovies");
     }
 })

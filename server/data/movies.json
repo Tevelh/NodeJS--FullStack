@@ -1,1 +1,56 @@
-[{"movieId":"1","name":"Inception","releaseDate":"2010-07-16","length":"170","director":"Christopher Nolan","picture":"https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg","userId":"68923d67c80345804978c78f"},{"name":"Arrow","releaseDate":"2012-10-10","length":"230","director":"Christopher Nolan","picture":"https://static.tvmaze.com/uploads/images/medium_portrait/143/358967.jpg","movieId":"3","userId":"68923d67c80345804978c78f"},{"name":"Gotham","releaseDate":"2014-09-22","length":"130","director":"FOX","picture":"https://static.tvmaze.com/uploads/images/medium_portrait/189/474715.jpg","userId":"68923d67c80345804978c78f","movieId":4},{"name":"Constantine","releaseDate":"2014-10-24","length":"123","director":"NBC","picture":"https://static.tvmaze.com/uploads/images/medium_portrait/0/154.jpg","userId":"689f7442b14a7cfff4fa3c52","movieId":5},{"name":"Person of Interest2","releaseDate":"20/10/2000","length":"60","director":"Christopher Nolan","picture":"https://static.tvmaze.com/uploads/images/medium_portrait/69/174906.jpg","userId":"689f7442b14a7cfff4fa3c52","movieId":6},{"name":"Person of Interest1","releaseDate":"20/10/2000","length":"60","director":"Francis Ford Coppola","picture":"https://static.tvmaze.com/uploads/images/medium_portrait/490/1226764.jpg","userId":"689f83ae473ac46c31036afd","movieId":7}]
+[
+    {
+        "movieId": 1,
+        "name": "Inception",
+        "releaseDate": "2010-07-16",
+        "length": "170",
+        "director": "Christopher Nolan",
+        "picture": "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg",
+        "userId": "68923d67c80345804978c78f"
+    },
+    {
+        "name": "Arrow",
+        "releaseDate": "2012-10-10",
+        "length": "230",
+        "director": "Christopher Nolan",
+        "picture": "https://static.tvmaze.com/uploads/images/medium_portrait/143/358967.jpg",
+        "movieId": 3,
+        "userId": "68923d67c80345804978c78f"
+    },
+    {
+        "name": "Gotham",
+        "releaseDate": "2014-09-22",
+        "length": "130",
+        "director": "FOX",
+        "picture": "https://static.tvmaze.com/uploads/images/medium_portrait/189/474715.jpg",
+        "userId": "68923d67c80345804978c78f",
+        "movieId": 4
+    },
+    {
+        "name": "Constantine",
+        "releaseDate": "2014-10-24",
+        "length": "123",
+        "director": "NBC",
+        "picture": "https://static.tvmaze.com/uploads/images/medium_portrait/0/154.jpg",
+        "userId": "689f7442b14a7cfff4fa3c52",
+        "movieId": 5
+    },
+    {
+        "name": "Person of Interest2",
+        "releaseDate": "20/10/2000",
+        "length": "60",
+        "director": "Christopher Nolan",
+        "picture": "https://static.tvmaze.com/uploads/images/medium_portrait/69/174906.jpg",
+        "userId": "689f7442b14a7cfff4fa3c52",
+        "movieId": 6
+    },
+    {
+        "name": "Person of Interest1",
+        "releaseDate": "20/10/2000",
+        "length": "60",
+        "director": "Francis Ford Coppola",
+        "picture": "https://static.tvmaze.com/uploads/images/medium_portrait/490/1226764.jpg",
+        "userId": "689f83ae473ac46c31036afd",
+        "movieId": 7
+    }
+]

@@ -68,7 +68,7 @@ getAllMovies(myMoviesContent, myMovies, "myMovies");
 
 document.getElementById("searchByMovieId").addEventListener("input", async(event)=>
 {
-    
+    event.preventDefault();
     let movieId = event.target.value;
     if(movieId == "")
     {
@@ -78,7 +78,7 @@ document.getElementById("searchByMovieId").addEventListener("input", async(event
     {
         let movie = await getMovieById(movieId);
         console.log(movie);
-        if(!movie)
+        if(!movie || movie == "No Movie found")
         {
             alert("No movie found");
             return;

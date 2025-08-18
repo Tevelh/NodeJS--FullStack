@@ -3,6 +3,10 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f2f4f8;
     color: #333;
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 60px;
 }
 
 .container {
@@ -371,4 +375,17 @@ body {
     flex-direction: column;
     gap: 10px;
     pointer-events: none;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; 
+    font-size: 15px;
+    color: #6b079a;
+    opacity: 0.8;
+    left: 0;
+    bottom: 0;
+    background: #f8f8f8;
+    z-index: 999;
 }
